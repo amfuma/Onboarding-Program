@@ -1,0 +1,15 @@
+<div class="companies-container">
+  <div class="content">
+    <h2>Select Company</h2>
+    <select
+      name="company"
+      id="companySelect"
+      (change)="onCompanySelect($event)"
+    >
+      <option value="" disabled selected>Pick an option</option>
+      <option *ngFor="let company of companies" [value]="company.id">
+        {{ company.name }}
+      </option>
+    </select>
+  </div>
+</div>

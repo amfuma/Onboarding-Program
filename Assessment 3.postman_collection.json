@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "908250d6-1613-4474-99ae-a32909e9c36a",
+		"name": "Assessment 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"cousingreg\",\n    \"password\": \"mosteligiblebachelor\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /company/id/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/company/6/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company",
+						"6",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /company/id/announcements",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/company/6/announcements",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company",
+						"6",
+						"announcements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /company/id/teams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/company/6/teams",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company",
+						"6",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /company/companyId/teams/teamId/projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/company/6/teams/11/projects",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company",
+						"6",
+						"teams",
+						"11",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

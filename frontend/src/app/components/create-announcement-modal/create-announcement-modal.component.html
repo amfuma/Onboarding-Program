@@ -1,0 +1,19 @@
+<div class="modal" [class.show]="showModal">
+  <div class="modal-content">
+    <div>
+      <button class="close-button" (click)="closeModal()">x</button>
+    </div>
+    <input
+      type="text"
+      [(ngModel)]="announcementTitle"
+      placeholder="Title"
+      class="announcement-title-input"
+    />
+    <textarea
+      [(ngModel)]="announcementText"
+      placeholder="Announcement"
+      class="announcement-text"
+    ></textarea>
+    <button (click)="submitAnnouncement()" class="submit-button">Submit</button>
+  </div>
+</div>

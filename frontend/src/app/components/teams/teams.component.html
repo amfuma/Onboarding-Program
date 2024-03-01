@@ -1,0 +1,78 @@
+<div class="teams-container" *ngIf="currentAdmin === true">
+  <div *ngFor="let team of teams" class="team-item">
+    <div class="blah">
+      <span class="clickable-item" (click)="goToProjects(team.id)">{{
+        team.name
+      }}</span>
+    </div>
+    <!-- ><span>Number of projects: {{ projectCount }}</span> -->
+    <p class="members">Members</p>
+    <span class="team-numofprojects-style"></span>
+    <div class="test-container">
+      <div *ngFor="let user of team.teammates" class="team-user-container">
+        <p class="team-user-item">
+          {{ user.firstName }} {{ user.lastName?.charAt(0) }}.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <button class="add-container" (click)="openModal()">
+    <img class="plus" src="/assets/plus_icon.png" alt="plus_icon" />
+    <h3 class="new_team">New Team</h3>
+  </button>
+</div>
+
+<div class="teams-container" *ngIf="currentAdmin === false">
+  <div *ngFor="let team of workerTeams" class="team-item">
+    <span class="clickable-item" (click)="goToProjects(team.id)">{{
+      team.name
+    }}</span>
+    <p>{{ team.description }}</p>
+    <span class="team-numofprojects-style"></span>
+    <div class="test-container">
+      <div *ngFor="let user of team.teammates" class="team-user-container">
+        <p class="team-user-item">
+          {{ user.firstName }} {{ user.lastName?.charAt(0) }}.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <ww-modal id="modal-add-team">
+    <button (click)="closeModal()" class="close-button">&times;</button>
+    <div class="input-field">
+      <input type="text" placeholder="team name" [(ngModel)]="newTeamName" />
+    </div>
+    <div class="input-field">
+      <input
+        type="text"
+        placeholder="description"
+        [(ngModel)]="newTeamDescription"
+      />
+    </div>
+    <h2>Select Members</h2>
+    <select [(ngModel)]="selectedUsers" multiple class="select-style">
+      <option *ngFor="let user of users" [value]="user">
+        {{ user.firstName }} {{ user.lastName }}
+      </option>
+    </select>
+
+    <div class="selected-users">
+      <ul style="list-style: none">
+        <li *ngFor="let user of selectedUsers" style="text-decoration: none">
+          {{ user.firstName }} {{ user.lastName?.charAt(0) }}.
+        </li>
+      </ul>
+    </div>
+
+    <div class="button-container">
+      <button (click)="closeModal(); createTeam()" class="end-button">
+        submit
+      </button>
+      <button (click)="clearSelection()" class="end-button">clear</button>
+    </div>
+  </ww-modal>
+</div>

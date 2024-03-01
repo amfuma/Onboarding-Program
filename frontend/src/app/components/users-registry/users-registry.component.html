@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>User Registry</h1>
+  <p class="overview">
+    A general view of all your members in your organization
+  </p>
+
+  <div class="user-table">
+    <div class="user-row header">
+      <div class="user-cell-header">Name</div>
+      <div class="user-cell-header">Email</div>
+      <div class="user-cell-header">Team</div>
+      <div class="user-cell-header">Active</div>
+      <div class="user-cell-header">Admin</div>
+      <div class="user-cell-header">Status</div>
+    </div>
+
+    <div *ngFor="let user of users" class="user-row">
+      <div class="user-cell">
+        {{ user.profile.firstName }} {{ user.profile.lastName }}
+      </div>
+      <div class="user-cell">{{ user.profile.email }}</div>
+      <div class="user-cell">{{ getUserTeam(user) }}</div>
+      <div
+        class="user-cell"
+        [ngClass]="{ active: user.active, inactive: !user.active }"
+      >
+        {{ user.active }}
+      </div>
+      <div
+        class="user-cell"
+        [ngClass]="{ admin: user.admin, 'not-admin': !user.admin }"
+      >
+        {{ user.admin }}
+      </div>
+      <div class="user-cell">{{ user.status }}</div>
+    </div>
+  </div>
+
+  <button class="add-user-button" (click)="openAddUserModal()">Add User</button>
+
+  <app-add-user-modal
+    [showModal]="showModal"
+    (closeModal)="closeAddUserModal()"
+  ></app-add-user-modal>
+</div>

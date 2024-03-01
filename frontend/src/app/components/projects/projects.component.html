@@ -1,0 +1,77 @@
+<div class="c" style="justify-content: center">
+  <div style="justify-content: center">
+    <h1 class="page-title">Projects</h1>
+  </div>
+  <div class="procon">
+    <div class="all-items-container">
+      <button (click)="openModal()" class="newProjectButton">New</button>
+    </div>
+  </div>
+  <div>
+    <div class="projects-container">
+      <div *ngFor="let project of projects" class="project-bubble">
+        <div>
+          <p class="clickable-item" (click)="openDescriptionModal(project)">
+            {{ project.name }}
+          </p>
+          <p>{{ project.description }}</p>
+        </div>
+        <div class="editButtonContainer">
+          <button (click)="openEditModal(project.id)" class="editButton">
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ww-modal id="modal-add-project">
+    <button (click)="closeModal()" class="close-button">&times;</button>
+    <div class="text-container">
+      <input
+        class="input-field"
+        type="text"
+        placeholder="project name"
+        [(ngModel)]="newProjectName"
+      />
+      <input
+        placeholder="description"
+        class="input-field"
+        type="text"
+        [(ngModel)]="newProjectDescription"
+      />
+    </div>
+
+    <button (click)="closeModal(); createProject()" class="end-button">
+      Submit
+    </button>
+  </ww-modal>
+
+  <ww-modal id="modal-edit-project">
+    <button (click)="closeModal()" class="close-button">&times;</button>
+    <div class="text-container">
+      <input
+        class="input-field"
+        type="text"
+        placeholder="project name"
+        [(ngModel)]="newProjectName"
+      />
+      <input
+        placeholder="description"
+        class="input-field"
+        type="text"
+        [(ngModel)]="newProjectDescription"
+      />
+    </div>
+
+    <button (click)="closeModal(); editProject()" class="end-button">
+      Save
+    </button>
+  </ww-modal>
+
+  <ww-modal id="modal-view-project">
+    <button (click)="closeModal()" class="close-button">&times;</button>
+    <h1>{{ modalData.name }}</h1>
+    <p>{{ modalData.description }}</p>
+  </ww-modal>
+</div>

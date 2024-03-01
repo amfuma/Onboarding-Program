@@ -1,0 +1,71 @@
+ww-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  overflow: auto;
+}
+
+.ww-modal-body {
+  padding: 20px;
+  background-color: #051622;
+  color: #ff6550;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  border-radius: 20px;
+}
+
+body.dark-mode .ww-modal {
+  background-color: rgb(91, 91, 91);
+}
+
+body.dark-mode .ww-modal .ww-modal-body {
+  background: rgb(91, 91, 91);
+  color: #fff;
+}
+
+.ng-untouched,
+.ng-pristine,
+.ng-valid {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 10px;
+  font-size: 16px;
+  color: #1ba098;
+  background-color: #051622;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #deb992;
+  text-align: center;
+}
+
+.select-style {
+  border: 3px solid #deb992;
+  min-width: 200px;
+  min-height: 150px;
+}
+
+.button-style {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.selected-users {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-input {
+  border: 3px solid rgb(207, 178, 122);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.text-area {
+  border: 3px solid rgb(207, 178, 122);
+}

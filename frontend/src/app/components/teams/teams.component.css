@@ -1,0 +1,144 @@
+.members {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+.teams-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Creates a responsive grid */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+.team-item {
+  border-radius: 20px;
+  background-color: rgb(31, 52, 77);
+  padding: 20px;
+}
+
+.team-name-style {
+  color: white;
+}
+
+.selected-users {
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+ul {
+  padding: 0px;
+}
+
+.test-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Adjust minmax for your needs */
+  gap: 10px; /* Space between items */
+}
+
+.clickable-item {
+  cursor: pointer;
+  transition: text-decoration 0.3s;
+  color: #ddd;
+}
+
+.select-style {
+  width: 25%;
+}
+
+.team-user-container {
+  background-color: #1ba098;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+.description {
+  color: white;
+}
+
+.add-container {
+  background-color: #051622;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid #deb992;
+  padding: 10%;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.plus {
+  max-height: 100px;
+  max-width: fit-content;
+  filter: invert(77%) sepia(3%) saturate(3592%) hue-rotate(1deg) brightness(92%)
+    contrast(95%);
+}
+.new_team {
+  margin-top: -5px;
+  color: #deb992;
+}
+
+.add-container:hover {
+  box-shadow: 1px 1px 5px white;
+  cursor: pointer;
+}
+
+.clear {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.team-item {
+  position: relative;
+}
+
+.blah {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #deb992;
+  padding: 10px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #deb992;
+}
+
+.close-button {
+  width: 25px;
+  height: 25px;
+  color: #f24e1e;
+  background-color: #051622;
+  border: 2px solid #f24e1e;
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.end-button {
+  width: 70px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #1ba098;
+  border-width: 3px;
+  border-color: #1ba098;
+  border-style: solid;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}

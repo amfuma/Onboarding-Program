@@ -1,0 +1,92 @@
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  width: 99.85vw;
+  background-color: #051622;
+  color: white;
+  margin: -8px 0px -8px -8px;
+  margin-right: -1;
+  border: 1px solid #deb992;
+}
+
+.menu-item {
+  padding: 8px;
+  margin-left: 15px;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.home-button {
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.hamburger-menu {
+  position: relative;
+  cursor: pointer;
+  background-color: #0d3a59;
+  border-radius: 4px;
+  right: 20px;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.modal {
+  position: relative;
+  z-index: 999;
+  top: 8px;
+  left: -8px;
+  width: 100vw;
+  height: 100%;
+  overflow: auto;
+  background-color: #0d3a59;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.menu-bar.open .modal {
+  top: 60px;
+}
+
+.modal-link,
+.logout-button {
+  padding: 12px 20px;
+  font-size: 18px;
+  color: #1ba098;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.logout-button:hover,
+.modal-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin {
+  color: #f24e1e;
+  font-weight: 100;
+}

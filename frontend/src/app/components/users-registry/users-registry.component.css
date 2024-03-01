@@ -1,0 +1,92 @@
+body {
+  background-color: #051622;
+  color: #deb992;
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 50px;
+  margin: 0;
+}
+
+p {
+  color: #1ba098;
+  margin-top: 0;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.user-table {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #051622;
+  border-radius: 8px;
+  /* overflow: hidden; */
+}
+
+.user-row {
+  display: flex;
+  /* grid-template-columns: repeat(6, 1fr); */
+}
+
+.header {
+  font-weight: bold;
+  color: #1ba098;
+}
+
+.user-cell {
+  flex: 2;
+  padding: 10px;
+  font-size: 9px;
+  color: #deb992;
+  border: 1px solid #deb992;
+}
+
+.user-cell-header {
+  color: white;
+  flex: 2;
+  padding: 10px;
+  border: 1px solid #deb992;
+}
+
+.user-cell-active,
+.user-cell-admin {
+  flex: 1;
+  padding: 10px;
+}
+
+.add-user-button {
+  width: 100px;
+  margin-top: 15px;
+  display: flex;
+  position: relative;
+  left: 30px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #1ba098;
+  border-width: 3px;
+  border-color: #1ba098;
+  border-style: solid;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.overview {
+  color: #1ba098;
+}
+
+.active,
+.admin {
+  color: green;
+}
+
+.inactive,
+.not-admin {
+  color: red;
+}

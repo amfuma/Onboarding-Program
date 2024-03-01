@@ -1,0 +1,80 @@
+<div class="modal" [style.display]="showModal ? 'block' : 'none'">
+  <div class="modal-content">
+    <div>
+      <div class="close-button" (click)="onCloseModal()">&times;</div>
+    </div>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="inputs" style="display: flex">
+        <input
+          type="text"
+          placeholder="First Name"
+          [(ngModel)]="firstname"
+          name="firstName"
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          [(ngModel)]="lastname"
+          name="lastName"
+        />
+      </div>
+      <div class="inputs" style="display: flex">
+        <input
+          type="text"
+          placeholder="Username"
+          [(ngModel)]="username"
+          name="username"
+        />
+        <input
+          type="text"
+          placeholder="Phone"
+          [(ngModel)]="phone"
+          name="phone"
+        />
+      </div>
+      <div class="inputs">
+        <input
+          type="text"
+          placeholder="Email"
+          [(ngModel)]="email"
+          name="email"
+        />
+      </div>
+      <div class="inputs" style="display: flex">
+        <input
+          class="password"
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          name="password"
+        />
+        <input
+          class="password"
+          type="password"
+          placeholder="Confirm Password"
+          name="confirmPassword"
+        />
+      </div>
+      <div class="admin-toggle">
+        <label for="adminToggle">Make Admin?</label>
+        <input
+          type="checkbox"
+          id="adminToggle"
+          [(ngModel)]="makeAdmin"
+          name="makeAdmin"
+        />
+      </div>
+      <div
+        style="
+          position: relative;
+          display: flex;
+          justify-content: center;
+          margin-top: 15px;
+        "
+      >
+        <button class="end-button" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="home-container">
+  <div class="announcement-header">
+    <div>
+      <h1 class="announcement-title">Announcements</h1>
+    </div>
+    <div class="con-con">
+      <div class="new-announcement-button-container">
+        <button
+          *ngIf="isAdmin()"
+          class="new-announcement-button"
+          (click)="openModal()"
+        >
+          New
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="announcement-list">
+    <div class="announcement" *ngFor="let announcement of announcements">
+      <div class="announcement-items">
+        <span class="name_title"
+          >{{ announcement.author.profile?.firstName }}
+          {{ announcement.author.profile?.lastName }}
+        </span>
+        <span class="date">{{ announcement.date | date }}</span>
+      </div>
+      <div class="announcement-body">
+        <h3>{{ announcement.title }}</h3>
+        <p class="ann_body">{{ announcement.message }}</p>
+      </div>
+    </div>
+  </div>
+  <app-create-announcement-modal
+    [showModal]="showModal"
+    [authorName]="authorName"
+  ></app-create-announcement-modal>
+</div>

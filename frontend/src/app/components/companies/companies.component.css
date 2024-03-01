@@ -1,0 +1,27 @@
+.companies-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #051622;
+  color: white;
+}
+
+.content {
+  text-align: center;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: #005594;
+  border: none;
+  font-weight: bold;
+}
+
+option {
+  font-weight: bold;
+}

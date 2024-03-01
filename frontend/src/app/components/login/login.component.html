@@ -1,0 +1,27 @@
+<div *ngIf="loginError" class="alert alert-danger fade-out" role="alert">
+  Incorrect username or password. Please try again.
+</div>
+
+<div class="login-container">
+  <div class="header">
+    <h1>WORKSHOP</h1>
+  </div>
+
+  <div class="login-form">
+    <div class="input-group">
+      <input
+        type="text"
+        placeholder="username"
+        [(ngModel)]="credentials.username"
+      />
+    </div>
+    <div class="input-group">
+      <input
+        type="password"
+        placeholder="password"
+        [(ngModel)]="credentials.password"
+      />
+    </div>
+    <button (click)="login()">LOGIN</button>
+  </div>
+</div>
